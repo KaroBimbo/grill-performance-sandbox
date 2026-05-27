@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Гриль-перфоманс: кухонная игра</title>
+    <meta
+      name="description"
+      content="Игровой помощник для гриль-перфоманса: выберите продукты, время и получите праздничный рецепт."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&family=Nunito:wght@400;600;700;800;900;1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=no-photo-1" />
+  </head>
+  <body>
+    <audio
+      id="licensedMusic"
+      src="assets/music/gubnaya-garmoshka.m4a"
+      preload="none"
+      loop
+    ></audio>
+    <header class="hero" id="top">
+      <div class="lottie-layer hero-sparkles" data-lottie="assets/lottie/sparkles.json" aria-hidden="true"></div>
+      <div class="lottie-layer hero-steam" data-lottie="assets/lottie/steam.json" aria-hidden="true"></div>
+      <nav class="nav" aria-label="Главная навигация">
+        <a class="brand" href="#top" aria-label="Гриль-перфоманс">
+          <span class="brand-mark">G</span>
+          <span>Гриль-перфоманс</span>
+        </a>
+        <div class="nav-actions">
+          <a href="#play">Игра</a>
+          <a href="#recipes">Рецепты</a>
+          <button class="icon-button" id="musicToggle" type="button" aria-pressed="false" aria-label="Включить музыку">
+            <span aria-hidden="true">♪</span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <p class="eyebrow">Праздничный помощник для готовки в аэрогриле</p>
+        <h1>Гриль-перфоманс</h1>
+        <p>
+          Поймай продукты, собери настроение и получи быстрый рецепт для аэрогриля.
+        </p>
+        <div class="hero-controls">
+          <a class="primary-link" href="#play">Начать сборку</a>
+          <button class="secondary-link" id="surpriseMe" type="button">Случайный набор</button>
+        </div>
+      </div>
+      <div class="hero-illustration" aria-hidden="true">
+        <div class="hero-window"></div>
+        <div class="hero-table"></div>
+        <div class="airfryer-illustration">
+          <span></span>
+        </div>
+        <img class="hero-plate" src="assets/italian-plate.png" alt="" loading="lazy">
+        <img class="hero-chef" src="assets/chef-dancing.png" alt="" loading="lazy">
+        <span class="hero-food tomato"></span>
+        <span class="hero-food lemon"></span>
+        <span class="hero-food basil"></span>
+        <span class="hero-food cheese"></span>
+        <span class="hero-glow one"></span>
+        <span class="hero-glow two"></span>
+        <span class="hero-glow three"></span>
+      </div>
+    </header>
+
+    <main>
+      <section class="game-zone" id="play" aria-labelledby="gameTitle">
+        <div class="section-heading">
+          <p class="eyebrow">мини-игра</p>
+          <h2 id="gameTitle">Что есть на кухне?</h2>
+          <p>Поймай продукты, которые уже есть дома. Шеф соберёт из них быстрый рецепт для аэрогриля.</p>
+          <ol class="game-steps" aria-label="Как играть">
+            <li>Поймай или выбери 5 продуктов.</li>
+            <li>Выбери время.</li>
+            <li>Получай рецепт.</li>
+            <li>Сохрани свою тарелку.</li>
+          </ol>
+        </div>
+
+        <div class="play-layout">
+          <div class="pantry-wrap">
+            <div class="game-hint" aria-hidden="true">
+              <span>Поймайте</span>
+              <span>продукты</span>
+            </div>
+            <div class="lottie-layer field-steam" data-lottie="assets/lottie/steam.json" aria-hidden="true"></div>
+            <img class="board-image" src="assets/cutting-board.png" alt="" aria-hidden="true" loading="lazy">
+            <div class="pantry" id="ingredientGrid" aria-label="Летающие ингредиенты"></div>
+          </div>
+
+          <aside class="cook-panel" aria-label="Настройки готовки">
+            <div class="panel-block">
+              <span class="panel-label">Время</span>
+              <p class="panel-value" id="selectedTimeCopy">Выбрано: 15 минут</p>
+              <div class="time-options" role="group" aria-label="Доступное время">
+                <button class="time-chip is-active" data-time="15" type="button">15 мин</button>
+                <button class="time-chip" data-time="25" type="button">25 мин</button>
+                <button class="time-chip" data-time="40" type="button">40 мин</button>
+              </div>
+            </div>
+
+            <div class="panel-block">
+              <span class="panel-label">Настроение</span>
+              <p class="panel-value" id="selectedMoodCopy">Сырно и уютно</p>
+              <div class="mood-options" role="group" aria-label="Настроение блюда">
+                <button class="mood-chip" data-mood="быстро и хрустяще" type="button">быстро и хрустяще</button>
+                <button class="mood-chip is-active" data-mood="сырно и уютно" type="button">сырно и уютно</button>
+                <button class="mood-chip" data-mood="овощной вайб" type="button">овощной вайб</button>
+                <button class="mood-chip" data-mood="праздничная тарелка" type="button">праздничная тарелка</button>
+              </div>
+              <p class="tiny-copy">Добавь настроение: хруст, сырный уют или овощной вайб.</p>
+            </div>
+
+            <div class="panel-block game-progress" aria-live="polite">
+              <div class="progress-topline">
+                <span class="panel-label">Сборка</span>
+                <strong id="progressCount">0/5</strong>
+              </div>
+              <div class="progress-track" aria-hidden="true">
+                <span id="progressBar"></span>
+              </div>
+              <p class="tiny-copy" id="progressCopy">Поймайте 5 продуктов, и сайт предложит рецепт.</p>
+              <button class="primary-button recipe-reveal" id="revealRecipe" type="button" disabled>Предложить рецепт</button>
+            </div>
+
+            <div class="basket">
+              <span class="panel-label">Тарелка</span>
+              <img class="chef-figure" src="assets/chef-dancing.png" alt="" aria-hidden="true" loading="lazy">
+              <div class="plate" aria-hidden="true">
+                <img class="plate-image" src="assets/italian-plate.png" alt="" loading="lazy">
+                <div id="platePile" class="plate-pile"></div>
+              </div>
+              <p class="plate-caption">Твоя будущая тарелка</p>
+              <div id="basketList" class="basket-list">Пока пусто</div>
+              <button class="secondary-button plate-reset" id="clearPlate" type="button">Очистить</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="recipes-section" id="recipes" aria-labelledby="recipesTitle">
+        <div class="section-heading">
+          <p class="eyebrow">подборка</p>
+          <h2 id="recipesTitle">Рецепты под ваш набор</h2>
+          <p id="matchCopy">Выберите ингредиенты, и карточки оживут.</p>
+        </div>
+        <div class="recipe-grid" id="recipeGrid"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Гриль-перфоманс • уютная готовка без суеты</span>
+      <a href="#top">Наверх</a>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script src="script.js?v=no-photo-1"></script>
+  </body>
+</html>

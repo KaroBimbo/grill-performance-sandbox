@@ -1,0 +1,42 @@
+{
+  "v": "5.7.4",
+  "fr": 30,
+  "ip": 0,
+  "op": 120,
+  "w": 240,
+  "h": 240,
+  "nm": "Italian chef kiss",
+  "ddd": 0,
+  "assets": [
+    {
+      "id": "chef_svg",
+      "w": 240,
+      "h": 240,
+      "u": "",
+      "p": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDAgMjQwIj4KPGRlZnM+PGZpbHRlciBpZD0icyIgeD0iLTIwJSIgeT0iLTIwJSIgd2lkdGg9IjE0MCUiIGhlaWdodD0iMTQwJSI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjEyIiBzdGREZXZpYXRpb249IjEwIiBmbG9vZC1jb2xvcj0iIzJiMWMxOCIgZmxvb2Qtb3BhY2l0eT0iMC4xOCIvPjwvZmlsdGVyPjwvZGVmcz4KPGcgZmlsdGVyPSJ1cmwoI3MpIj4KPHBhdGggZD0iTTgyIDE3MWMyLTM0IDE4LTU0IDQwLTU0czM4IDIwIDQwIDU0djM0SDgyeiIgZmlsbD0iI2ZmZmFmMCIvPgo8cGF0aCBkPSJNODUgMTU5aDc0djE0SDg1eiIgcng9IjciIGZpbGw9IiMyYTc4YWQiLz4KPGNpcmNsZSBjeD0iMTIwIiBjeT0iMTA0IiByPSI0MyIgZmlsbD0iI2ZmYmE4ZCIvPgo8ZWxsaXBzZSBjeD0iMTA0IiBjeT0iOTgiIHJ4PSI1IiByeT0iNyIgZmlsbD0iIzJiMWMxOCIvPjxlbGxpcHNlIGN4PSIxMzYiIGN5PSI5OCIgcng9IjUiIHJ5PSI3IiBmaWxsPSIjMmIxYzE4Ii8+CjxlbGxpcHNlIGN4PSIxMDciIGN5PSIxMjIiIHJ4PSIyMCIgcnk9IjEwIiBmaWxsPSIjMmIxYzE4IiB0cmFuc2Zvcm09InJvdGF0ZSgxMCAxMDcgMTIyKSIvPjxlbGxpcHNlIGN4PSIxMzMiIGN5PSIxMjIiIHJ4PSIyMCIgcnk9IjEwIiBmaWxsPSIjMmIxYzE4IiB0cmFuc2Zvcm09InJvdGF0ZSgtMTAgMTMzIDEyMikiLz4KPHBhdGggZD0iTTExMCAxMzZxMTAgMTAgMjIgMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOGIzZDY0IiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8Y2lyY2xlIGN4PSI4NiIgY3k9IjYwIiByPSIyMyIgZmlsbD0iI2ZmZmFmMCIvPjxjaXJjbGUgY3g9IjEyMCIgY3k9IjQ3IiByPSIzMSIgZmlsbD0iI2ZmZmFmMCIvPjxjaXJjbGUgY3g9IjE1NCIgY3k9IjYwIiByPSIyNCIgZmlsbD0iI2ZmZmFmMCIvPjxyZWN0IHg9Ijc0IiB5PSI2NiIgd2lkdGg9IjkyIiBoZWlnaHQ9IjI5IiByeD0iMTAiIGZpbGw9IiNmZmZhZjAiLz4KPHBhdGggZD0iTTc5IDg4aDgyIiBzdHJva2U9IiNiOGQ3ZWMiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2NiAxMTYpIHJvdGF0ZSgtMzgpIj48Y2lyY2xlIGN4PSIwIiBjeT0iMjEiIHI9IjE5IiBmaWxsPSIjZmZjNDlkIi8+PHJlY3QgeD0iLTE0IiB5PSItMTkiIHdpZHRoPSIxMSIgaGVpZ2h0PSI0MiIgcng9IjciIGZpbGw9IiNmZmM0OWQiLz48cmVjdCB4PSIyIiB5PSItMjEiIHdpZHRoPSIxMSIgaGVpZ2h0PSI0NCIgcng9IjciIGZpbGw9IiNmZmM0OWQiLz48L2c+CjxwYXRoIGQ9Ik0yMDIgNzFsNyAxNyAxOCAyLTE0IDExIDQgMTgtMTUtMTAtMTYgMTAgNS0xOC0xNC0xMSAxOC0yeiIgZmlsbD0iI2ZmZDA1YSIvPgo8dGV4dCB4PSIxNzYiIHk9IjU4IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNlOTRkM2MiPm13YWg8L3RleHQ+CjwvZz4KPC9zdmc+",
+      "e": 1
+    }
+  ],
+  "layers": [
+    {
+      "ddd": 0,
+      "ind": 1,
+      "ty": 2,
+      "nm": "chef image",
+      "refId": "chef_svg",
+      "sr": 1,
+      "ks": {
+        "o": { "a": 0, "k": 100 },
+        "r": { "a": 0, "k": 0 },
+        "p": { "a": 0, "k": [120, 120, 0] },
+        "a": { "a": 0, "k": [120, 120, 0] },
+        "s": { "a": 0, "k": [100, 100, 100] }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 120,
+      "st": 0,
+      "bm": 0
+    }
+  ]
+}
