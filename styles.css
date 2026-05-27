@@ -1,14 +1,21 @@
 :root {
-  --ink: #2b1c18;
-  --muted: #7d6259;
-  --paper: #fff8ef;
-  --cream: #fff1d8;
-  --tomato: #e94d3c;
-  --saffron: #f6b333;
-  --mint: #5fbf91;
-  --berry: #8b3d64;
-  --char: #1f2520;
-  --shadow: 0 24px 80px rgba(76, 39, 24, 0.18);
+  /* Ghibli Italian Kitchen Palette */
+  --ink: #3d2c24;
+  --muted: #8b7355;
+  --paper: #fef9f0;
+  --cream: #f5e6d3;
+  --tomato: #c9463d;
+  --saffron: #e8a849;
+  --mint: #7ba67d;
+  --berry: #8b5a5a;
+  --char: #2d241f;
+  --olive: #6b7c52;
+  --terracotta: #c67b5c;
+  --warm-white: #fdf8ef;
+  --soft-brown: #a68b6a;
+  --sky-blue: #b8d4e3;
+  --shadow: 0 24px 80px rgba(61, 44, 36, 0.15);
+  --ghibli-glow: 0 0 40px rgba(232, 168, 73, 0.2);
 }
 
 * {
@@ -23,7 +30,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: 'Nunito', 'Comfortaa', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 button,
@@ -42,7 +49,11 @@ button {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background-image: linear-gradient(90deg, rgba(43, 28, 24, 0.08), rgba(43, 28, 24, 0.03));
+  background: 
+    radial-gradient(ellipse at 20% 80%, rgba(232, 168, 73, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(184, 212, 227, 0.2) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 50%, rgba(198, 123, 92, 0.08) 0%, transparent 60%),
+    linear-gradient(180deg, #e8d4b8 0%, #f5e6d3 30%, #fef9f0 100%);
   background-size: cover;
   background-position: center;
 }
@@ -91,7 +102,7 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  color: #fff;
+  color: var(--ink);
   position: relative;
   z-index: 2;
 }
@@ -116,10 +127,10 @@ button {
   aspect-ratio: 1;
   display: grid;
   place-items: center;
-  border-radius: 8px;
-  background: var(--saffron);
-  color: var(--char);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  background: linear-gradient(145deg, var(--saffron), var(--terracotta));
+  color: var(--warm-white);
+  box-shadow: 0 8px 22px rgba(198, 123, 92, 0.3);
 }
 
 .nav-actions {
@@ -138,7 +149,7 @@ button {
   margin: 0 auto;
   align-self: center;
   padding: 40px 0 14vh;
-  color: #fff;
+  color: var(--ink);
   position: relative;
   z-index: 2;
 }
@@ -153,7 +164,7 @@ button {
 }
 
 .hero .eyebrow {
-  color: #ffd36a;
+  color: var(--terracotta);
 }
 
 h1,
@@ -165,22 +176,21 @@ p {
 h1 {
   max-width: 860px;
   margin: 0;
-  font-family: Nunito, Inter, sans-serif;
-  font-size: clamp(3rem, 9vw, 7.4rem);
-  line-height: 0.9;
-  font-weight: 1000;
-  color: #fff7e6;
+  font-family: 'Comfortaa', 'Nunito', sans-serif;
+  font-size: clamp(3rem, 9vw, 6.5rem);
+  line-height: 1;
+  font-weight: 700;
+  color: var(--ink);
   text-shadow:
-    0 3px 0 #f6b333,
-    0 7px 0 rgba(233, 77, 60, 0.9),
-    0 18px 36px rgba(0, 0, 0, 0.36);
+    0 2px 0 rgba(232, 168, 73, 0.3),
+    0 4px 20px rgba(198, 123, 92, 0.15);
   text-wrap: balance;
 }
 
 .hero-content p:not(.eyebrow) {
   max-width: 560px;
   margin: 24px 0 0;
-  color: rgba(255, 255, 255, 0.88);
+  color: var(--muted);
   font-size: clamp(1rem, 2vw, 1.22rem);
   line-height: 1.65;
 }
@@ -204,9 +214,9 @@ h1 {
 
 .primary-link,
 .primary-button {
-  background: var(--tomato);
-  color: #fff;
-  box-shadow: 0 16px 32px rgba(233, 77, 60, 0.32);
+  background: linear-gradient(145deg, var(--tomato), #a83a32);
+  color: var(--warm-white);
+  box-shadow: 0 12px 28px rgba(201, 70, 61, 0.25);
 }
 
 .primary-link,
@@ -595,6 +605,21 @@ main {
     drop-shadow(0 8px 5px rgba(66, 38, 20, 0.18));
   animation: wiggle 2.9s ease-in-out infinite;
   transform-origin: 50% 60%;
+}
+
+.food-icon.food-image {
+  width: clamp(48px, 5vw, 64px);
+  height: clamp(48px, 5vw, 64px);
+  border-radius: 50%;
+  object-fit: cover;
+  filter:
+    saturate(1.1)
+    contrast(1.02)
+    drop-shadow(0 6px 8px rgba(61, 44, 36, 0.2));
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 
+    inset 0 0 8px rgba(255, 255, 255, 0.4),
+    0 4px 12px rgba(61, 44, 36, 0.15);
 }
 
 .sticker-svg {
@@ -1073,13 +1098,21 @@ main {
   aspect-ratio: 1;
   border-radius: 45% 55% 50% 50%;
   background:
-    radial-gradient(circle at 32% 25%, rgba(255, 255, 255, 0.78), transparent 28%),
-    rgba(255, 250, 236, 0.86);
+  radial-gradient(circle at 32% 25%, rgba(255, 255, 255, 0.78), transparent 28%),
+  rgba(255, 250, 236, 0.86);
   box-shadow: 0 8px 16px rgba(43, 28, 24, 0.12), inset 0 -4px 8px rgba(42, 120, 173, 0.08);
   font-size: 2rem;
   filter: sepia(0.08) saturate(0.95);
   animation: plate-pop 260ms ease both;
-}
+  }
+
+  .plate-food-image {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: saturate(1.05);
+  }
 
 .basket-list span {
   border-radius: 999px;
@@ -1087,7 +1120,17 @@ main {
   padding: 7px 10px;
   color: var(--ink);
   font-weight: 700;
-}
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  }
+
+  .basket-food-image {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 
 .plate-reset {
   width: 100%;
@@ -1101,18 +1144,19 @@ main {
 }
 
 .recipe-card {
-  border: 1px solid rgba(43, 28, 24, 0.09);
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 16px 40px rgba(65, 43, 34, 0.1);
+  border: 1px solid rgba(61, 44, 36, 0.08);
+  border-radius: 12px;
+  background: var(--warm-white);
+  box-shadow: 0 12px 32px rgba(61, 44, 36, 0.08);
   overflow: hidden;
+  transition: transform 280ms ease, box-shadow 280ms ease;
 }
 
 .recipe-card.is-featured {
-  border-color: rgba(246, 179, 51, 0.62);
+  border-color: rgba(232, 168, 73, 0.5);
   box-shadow:
-    0 22px 58px rgba(246, 179, 51, 0.18),
-    0 16px 40px rgba(65, 43, 34, 0.1);
+    0 18px 48px rgba(232, 168, 73, 0.15),
+    0 12px 32px rgba(61, 44, 36, 0.08);
   transform: translateY(-4px);
 }
 
@@ -1930,13 +1974,13 @@ h1 {
   bottom: 19%;
   width: 31%;
   aspect-ratio: 0.86;
-  border: 3px solid rgba(45, 34, 24, 0.75);
+  border: 3px solid var(--soft-brown);
   border-radius: 28px 28px 34px 34px;
   background:
-    radial-gradient(circle at 74% 18%, #fff7e8 0 4px, transparent 5px),
-    linear-gradient(180deg, #fffdf6, #f5e6c8 55%, #e9c999);
-  box-shadow: inset -10px -12px 0 rgba(47, 93, 156, 0.12), 0 22px 28px rgba(45, 34, 24, 0.18);
-}
+  radial-gradient(circle at 74% 18%, var(--warm-white) 0 4px, transparent 5px),
+  linear-gradient(180deg, var(--warm-white), var(--cream) 55%, #d4b896);
+  box-shadow: inset -10px -12px 0 rgba(123, 166, 125, 0.1), 0 22px 28px rgba(61, 44, 36, 0.15);
+  }
 
 .airfryer-illustration span {
   position: absolute;
@@ -1944,10 +1988,10 @@ h1 {
   right: 16%;
   bottom: 16%;
   height: 32%;
-  border: 2px solid rgba(45, 34, 24, 0.68);
+  border: 2px solid var(--soft-brown);
   border-radius: 18px;
-  background: linear-gradient(180deg, rgba(47, 93, 156, 0.34), rgba(45, 34, 24, 0.14));
-}
+  background: linear-gradient(180deg, rgba(123, 166, 125, 0.25), rgba(107, 124, 82, 0.15));
+  }
 
 .hero-plate {
   position: absolute;

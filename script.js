@@ -1,3 +1,39 @@
+// Ghibli-style ingredient images
+const ingredientImages = {
+  cheese: "assets/ingredients/cheese.jpg",
+  tomato: "assets/ingredients/tomato.jpg",
+  pepper: "assets/ingredients/pepper.jpg",
+  mushroom: "assets/ingredients/mushroom.jpg",
+  chicken: "assets/ingredients/chicken.jpg",
+  corn: "assets/ingredients/corn.jpg",
+  herbs: "assets/ingredients/herbs.jpg",
+  eggplant: "assets/ingredients/eggplant.jpg",
+  carrot: "assets/ingredients/carrot.jpg",
+  potato: "assets/ingredients/potato.jpg",
+  onion: "assets/ingredients/onion.jpg",
+  garlic: "assets/ingredients/garlic.jpg",
+  bacon: "assets/ingredients/bacon.jpg",
+  shrimp: "assets/ingredients/shrimp.jpg",
+  avocado: "assets/ingredients/avocado.jpg",
+  lemon: "assets/ingredients/lemon.jpg",
+  chili: "assets/ingredients/chili.jpg",
+  cucumber: "assets/ingredients/cucumber.jpg",
+  sauce: "assets/ingredients/sauce.jpg",
+  bread: "assets/ingredients/bread.jpg",
+  pineapple: "assets/ingredients/pineapple.jpg",
+  fish: "assets/ingredients/fish.jpg",
+  salmon: "assets/ingredients/salmon.jpg",
+  beef: "assets/ingredients/beef.jpg",
+  pork: "assets/ingredients/pork.jpg",
+  cream: "assets/ingredients/cream.jpg",
+  butter: "assets/ingredients/butter.jpg",
+  flour: "assets/ingredients/flour.jpg",
+  zucchini: "assets/ingredients/zucchini.jpg",
+  rice: "assets/ingredients/rice.jpg",
+  beans: "assets/ingredients/beans.jpg",
+  peas: "assets/ingredients/peas.jpg",
+};
+
 const stickerIcons = {
   salmon: `
     <svg class="sticker-svg red-fish-sticker" viewBox="0 0 96 96" aria-hidden="true">
@@ -35,38 +71,38 @@ const stickerIcons = {
 };
 
 const ingredients = [
-  { id: "cheese", name: "Сыр", icon: "🧀", color: "#ffe49c" },
-  { id: "tomato", name: "Томаты", icon: "🍅", color: "#ffe0d9" },
-  { id: "pepper", name: "Перец", icon: "🫑", color: "#dcf5de" },
-  { id: "mushroom", name: "Грибы", icon: "🍄", color: "#efe4da" },
-  { id: "chicken", name: "Курица", icon: "🍗", color: "#ffe1c7" },
-  { id: "corn", name: "Кукуруза", icon: "🌽", color: "#fff4b9" },
-  { id: "herbs", name: "Зелень", icon: "🌿", color: "#dff3de" },
-  { id: "eggplant", name: "Баклажан", icon: "🍆", color: "#eadff5" },
-  { id: "carrot", name: "Морковь", icon: "🥕", color: "#ffe1c2" },
-  { id: "potato", name: "Картофель", icon: "🥔", color: "#eee0c3" },
-  { id: "onion", name: "Лук", icon: "🧅", color: "#f3e3ff" },
-  { id: "garlic", name: "Чеснок", icon: "🧄", color: "#fff4dc" },
-  { id: "bacon", name: "Бекон", icon: "🥓", color: "#ffd9d0" },
-  { id: "shrimp", name: "Креветки", icon: "🍤", color: "#ffe0cf" },
-  { id: "avocado", name: "Авокадо", icon: "🥑", color: "#dff0bf" },
-  { id: "lemon", name: "Лимон", icon: "🍋", color: "#fff7a8" },
-  { id: "chili", name: "Чили", icon: "🌶️", color: "#ffd1c8" },
-  { id: "cucumber", name: "Огурец", icon: "🥒", color: "#d8f1cd" },
-  { id: "sauce", name: "Соус", icon: "🥫", color: "#ffd8c7" },
-  { id: "bread", name: "Хлеб", icon: "🍞", color: "#ffe4bd" },
-  { id: "pineapple", name: "Ананас", icon: "🍍", color: "#fff1a7" },
-  { id: "fish", name: "Рыба", icon: "🐟", color: "#dcefff" },
-  { id: "salmon", name: "Лосось", icon: stickerIcons.salmon, color: "#ffd6c8" },
-  { id: "beef", name: "Говядина", icon: "🥩", color: "#ffd0c8" },
-  { id: "pork", name: "Свинина", icon: "🍖", color: "#ffd9cc" },
-  { id: "cream", name: "Сливки", icon: "🥛", color: "#fff8e8" },
-  { id: "butter", name: "Масло", icon: "🧈", color: "#fff2b8" },
-  { id: "flour", name: "Мука", icon: stickerIcons.flour, color: "#fff4dc" },
-  { id: "zucchini", name: "Кабачок", icon: stickerIcons.zucchini, color: "#dff0bf" },
-  { id: "rice", name: "Рис", icon: "🍚", color: "#f7f5ed" },
-  { id: "beans", name: "Фасоль", icon: "🫘", color: "#ead0c0" },
-  { id: "peas", name: "Горошек", icon: "🫛", color: "#d9f2c5" },
+  { id: "cheese", name: "Сыр", icon: ingredientImages.cheese, color: "#f5e6d3", isImage: true },
+  { id: "tomato", name: "Томаты", icon: ingredientImages.tomato, color: "#f5d4d0", isImage: true },
+  { id: "pepper", name: "Перец", icon: ingredientImages.pepper, color: "#e5f0de", isImage: true },
+  { id: "mushroom", name: "Грибы", icon: ingredientImages.mushroom, color: "#efe4da", isImage: true },
+  { id: "chicken", name: "Курица", icon: ingredientImages.chicken, color: "#f5e1c7", isImage: true },
+  { id: "corn", name: "Кукуруза", icon: ingredientImages.corn, color: "#f5f0c5", isImage: true },
+  { id: "herbs", name: "Зелень", icon: ingredientImages.herbs, color: "#dff3de", isImage: true },
+  { id: "eggplant", name: "Баклажан", icon: ingredientImages.eggplant, color: "#e8dff0", isImage: true },
+  { id: "carrot", name: "Морковь", icon: ingredientImages.carrot, color: "#f5e1c2", isImage: true },
+  { id: "potato", name: "Картофель", icon: ingredientImages.potato, color: "#eee0c3", isImage: true },
+  { id: "onion", name: "Лук", icon: ingredientImages.onion, color: "#f3e8e0", isImage: true },
+  { id: "garlic", name: "Чеснок", icon: ingredientImages.garlic, color: "#f5f0dc", isImage: true },
+  { id: "bacon", name: "Бекон", icon: ingredientImages.bacon, color: "#f5d9d0", isImage: true },
+  { id: "shrimp", name: "Креветки", icon: ingredientImages.shrimp, color: "#f5e0cf", isImage: true },
+  { id: "avocado", name: "Авокадо", icon: ingredientImages.avocado, color: "#dff0bf", isImage: true },
+  { id: "lemon", name: "Лимон", icon: ingredientImages.lemon, color: "#f5f2a8", isImage: true },
+  { id: "chili", name: "Чили", icon: ingredientImages.chili, color: "#f5d1c8", isImage: true },
+  { id: "cucumber", name: "Огурец", icon: ingredientImages.cucumber, color: "#d8f1cd", isImage: true },
+  { id: "sauce", name: "Соус", icon: ingredientImages.sauce, color: "#f5d8c7", isImage: true },
+  { id: "bread", name: "Хлеб", icon: ingredientImages.bread, color: "#f5e4bd", isImage: true },
+  { id: "pineapple", name: "Ананас", icon: ingredientImages.pineapple, color: "#f5f1a7", isImage: true },
+  { id: "fish", name: "Рыба", icon: ingredientImages.fish, color: "#dcefff", isImage: true },
+  { id: "salmon", name: "Лосось", icon: ingredientImages.salmon, color: "#f5d6c8", isImage: true },
+  { id: "beef", name: "Говядина", icon: ingredientImages.beef, color: "#f5d0c8", isImage: true },
+  { id: "pork", name: "Свинина", icon: ingredientImages.pork, color: "#f5d9cc", isImage: true },
+  { id: "cream", name: "Сливки", icon: ingredientImages.cream, color: "#f5f8e8", isImage: true },
+  { id: "butter", name: "Масло", icon: ingredientImages.butter, color: "#f5f2b8", isImage: true },
+  { id: "flour", name: "Мука", icon: ingredientImages.flour, color: "#f5f4dc", isImage: true },
+  { id: "zucchini", name: "Кабачок", icon: ingredientImages.zucchini, color: "#dff0bf", isImage: true },
+  { id: "rice", name: "Рис", icon: ingredientImages.rice, color: "#f7f5ed", isImage: true },
+  { id: "beans", name: "Фасоль", icon: ingredientImages.beans, color: "#ead0c0", isImage: true },
+  { id: "peas", name: "Горошек", icon: ingredientImages.peas, color: "#d9f2c5", isImage: true },
 ];
 
 const recipes = [
@@ -120,7 +156,7 @@ const recipes = [
     tones: ["#F4B84A", "#D94A32"],
     text: "Сытный рецепт для большой компании: сладкая кукуруза, курица и сырная корочка.",
     steps: [
-      "Нарежьте курицу небольшими кусочками и смешайте со специями.",
+      "Нарежьте курицу небольшими ��усочками и смешайте со специями.",
       "Добавьте кукурузу, сыр и немного масла.",
       "Разложите всё в корзине аэрогриля без высокой горки.",
       "Готовьте при 185°C 24–28 минут до румяности.",
@@ -450,9 +486,9 @@ function renderIngredients() {
           type="button"
           aria-label="Поймать ${item.name}"
         >
-          <span class="food-illustration" aria-hidden="true">
-            <span class="paint-wash"></span>
-            <span class="food-icon">${item.icon}</span>
+  <span class="food-illustration" aria-hidden="true">
+  <span class="paint-wash"></span>
+  ${item.isImage ? `<img class="food-icon food-image" src="${item.icon}" alt="${item.name}" loading="lazy">` : `<span class="food-icon">${item.icon}</span>`}
             <span class="paint-spark"></span>
           </span>
         </button>
@@ -556,8 +592,8 @@ function startFoodFlight() {
 function renderBasket() {
   const picked = ingredients.filter((item) => selected.has(item.id));
   const progress = Math.min(selected.size, PLATE_TARGET);
-  basketList.innerHTML = picked.length ? picked.map((item) => `<span>${item.icon} ${item.name}</span>`).join("") : "Пока пусто";
-  platePile.innerHTML = picked.map((item) => `<span class="plate-food" title="${item.name}">${item.icon}</span>`).join("");
+  basketList.innerHTML = picked.length ? picked.map((item) => item.isImage ? `<span><img src="${item.icon}" alt="${item.name}" class="basket-food-image"> ${item.name}</span>` : `<span>${item.icon} ${item.name}</span>`).join("") : "Пока пусто";
+  platePile.innerHTML = picked.map((item) => item.isImage ? `<span class="plate-food" title="${item.name}"><img src="${item.icon}" alt="${item.name}" class="plate-food-image"></span>` : `<span class="plate-food" title="${item.name}">${item.icon}</span>`).join("");
   progressCount.textContent = `${progress}/${PLATE_TARGET}`;
   progressBar.style.width = `${(progress / PLATE_TARGET) * 100}%`;
   revealRecipe.disabled = selected.size < PLATE_TARGET;
